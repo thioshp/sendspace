@@ -1,0 +1,1152 @@
+-- 1.3.9 --
+
+- Fixed a rare crash when browsing to a different local or remote folder.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.3.7 & 1.3.8 --
+
+- Added search capabilities to both the local and the remote folder.
+
+- The browsers now remember the column sort order across sessions.
+
+- Added number of completed downloads/uploads to status bar.
+
+- Fixed the navigation arrows and other key events in the addressbook.
+
+- Opening a file's properties with Alt-Enter (Cmd-Enter on Mac) and other contextual menu commands now work directly without having to open the menu.
+
+- Extended link support.
+
+- Fixed multiple-item edits in file properties.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.3.6 --
+
+- Restored support for MacOSX powerpc architecture and MacOSX 10.4 (Tiger). This is the last version with support for this configuration.
+  No updates will be provided in the future for powerpc-based computers.
+
+-- 1.3.5 --
+
+- Fixed a crash while writing text with spell checking enabled, caused by a bug in MacOSX Mountain Lion (10.8.x)
+  Spell checking in the Wizard will be disabled on systems running MacOS 10.8.x until Apple releases a fix for this issue.
+
+-- 1.3.4 --
+
+- Fixed a problem with Drag&Drop on certain platforms and configurations that could prevent users from dropping files in the transfer area.
+
+- Fixed a problem restoring the upload speed limit value when the preferences dialog was entered.
+
+- Fixed a bug where a remote file added via the URL field in the Wizard will not auto-start even if files are set to start automatically when queued.
+
+- Added a warning for expired accounts. 
+
+- Modified the dialog shown when a file already exists to give the user fine grained control over the options.
+
+- Added default transfer finished and transfer errored sound files to the Mac application bundle.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.3.3 --
+
+- Fixed a problem with the transfer ordering when uploading a group of files at the same time that could cause a spurious internal inconsistence error.
+
+-- 1.3.2 --
+
+- Fixed lockups in some MacOS X systems caused by the session log saving/loading.
+
+-- 1.3.1 --
+
+- Fixed a problem with file limits causing some Pro users' uploads to fail under certain conditions.
+
+- Fixed a bug where systems with a RTL language as default language would show english text incorrectly.
+
+- Improved the Drag&Drop handling for files dragged from outside the Wizard, and increased the drop area.
+
+- Fixed a rare crash when a file finishes uploading during a refresh of the remote browser.
+
+- Fixed a problem where restoring the saved log when the Wizard is restarted could fail in some systems.
+
+- Fixed an incompatibility with some MacOS ppc systems that could cause the Wizard to not start.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.3.0 --
+
+- Fixed a problem where the file icons would not be showing correctly under certain circumstances.
+
+- When a folder is uploaded and a single link for the whole shared folder is requested, all the subfolders will also be shared and show on the shared folder link.
+
+- Fixed a rare problem where a file with an unicode name in certain encodings would not be allowed to be added to the queue.
+
+- Mark a file as errored if the downloaded size and the filesystem size are inconsistent.
+
+- Fixed a bug where new transfers could fail and report that the download size was bigger than the file size if part files from a previous download attempt already existed.
+
+- Fixed a bug where some files could fail to resume on Windows if they needed to be opened in binary mode.
+
+- Fixed a bug where some unicode filenames could cause the Wizard to restart a file from scratch instead of resuming it.
+
+- Avoid showing CRT assert dialogs and exceptions to users on Windows.
+
+- Fixed some crashes related to the saving and loading of the log across sessions.
+
+- Fixed a rare crash on communication with the system browser on Windows.
+
+- Fixed a crash when the tray icon was deleted by the operating system before the application was closed.
+
+- Fixed a possible application crash on close when the UI close button is triggered programmatically (for example, when shutting down the operating system).
+
+- Improved performance of transfer queue by avoiding the possibility of multiple queued events for processing.
+
+- Fixed a crash on the delayed deletion of transfers when autoclear completed transfers is active.
+
+- Fixed a crash in the speed calculation for transfers.
+
+- Corrected the layout of the file download limits item in the properties dialog.
+
+- Fixed a bug with the display of the download limits on MacOS X.
+
+- Improved VoiceOver support on MacOS X.
+
+- Improved compatibility with MacOS X 10.7 "Lion".
+
+- Fixed a crash where the file properties could show while no item was selected anymore if the item dissapeared, leading to a crash upon closing the dialog.
+
+- Fixed a display bug where modifying the "Shared" status of a folder on the remote browser would change the text in the wrong browser column.
+
+- Several fixes to the sendspace library that improve the stability and performance of the application.
+
+- Fixed Drag & Drop on Linux.
+
+- Fixed several misc. bugs and improved stability.
+
+
+-- 1.2.15 --
+
+- Added support for setting and examining file limits, including time-based and downloads-based limits, and the actions to take when they're reached.
+  Files that have a set limit will appear in red in the remote browser.
+
+- Several fixes to folder transfer processing, including:
+  - Folders bigger than 4GB in total size will now show the correct size.
+  - Folders that were transferring in a previous Wizard run session will now reflect the right transferred size instead of resetting to zero.
+    Formerly, a bug could make it seem as if the folder is restarting the transfer instead of continuing it, but it would just upload what was missing and make it 100% when the leftover data was finished.
+  - Folders being downloaded will now always verify the existance of the destination files and resume them if needed.
+  - The upload process for folders has been streamlined to speedup the verification of the already uploaded files.
+
+- Selecting to send a single email when a folder finishes uploading instead of individual emails now also sends an email to the uploader with the right link.
+
+- Support for Windows 2000.
+
+- Fixed several item layout problems in the preferences dialog.
+
+- Fixes to a problem that could cause configuration files being reset in some systems.
+
+- Added a button to conveniently access the account upgrade page from the Wizard.
+
+- Fixed a possible crash when Drag&Drop was used with items that were not text of files.
+
+- The gravity of the splitter between browsers has been changed to resize more fairly whenr esizing the application.
+
+- Fixed configuration file uicode problems creating corrupted file names on transfer list in some systems, particularly MacOS X.
+
+- Fixed crashes related to unicode text being present in the saved log file.
+
+- Fixed the trimming of the saved log incorrectly resetting the data on some situations.
+
+- Fixed some keyboard events not being correctly sent to the right subwindow of the application.
+
+- Fixed incorrect menu commands being available for some file selections.
+
+- Removed legacy compatibility with 1.1.x versions to improve startup times.
+
+- Fixed a possible crash while an item's lael is being edited inplace and the item's browser is refreshed.
+
+- Improved bug reporting procedure to simplify the automated system and generate faster response times.
+
+- Updates splashscreen copyright to 2011.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.2.14 --
+
+- Fixed some cases where a partially uploaded file inside a folder transfer would restart from the beginning instead of resuming.
+
+- Files downloaded using only one part are now renamed instead of copied to the final name.
+
+- The joining of part files when a download finishes is now 25% faster.
+
+- Fixed a timing problem that caused the the retry code while deleting unused part files to retry too fast.
+
+- Downloaded files now have the status "Finishing" until all the parts are joined, when it will change to "Finished".
+
+- Files waiting for a download link no longer request more than one link per retry attempt.
+
+- When a file being downloaded already exists in the hard disk, the options now are to either overwrite the original file or rename the downloaded file to end in (1) or successive numbers.
+
+- When showing the right click contextual menu for a transfer in the list, only the allowed actions are enabled on the menu. The first item will also change from "Start transfer" to "Resume transfer" depending on the status of the file.
+
+- Fixed a possible crash when using the toolbar to start or stop a transfer before the contextual menu has been used.
+
+- Fixed files inside a folder added to the queue not refreshing the user interface to reflect "Queued" after the error retry timer reaches 0.
+
+- Fixed a rare error when resuming files that could cause some downloaded files to not join or delete one or more of the partial files in very special cases.
+
+- Fixed a problem where if a file already downloaded changed size on the server or on the disk while downloading a folder, when restarting the download for that file the original file would not be overwritten but instead a file ending in (1) will be created.
+
+- Fixed a problem where two files that caused an error while downloading could go in a loop each one trying to resume the other.
+
+- Fixes to the completion thread not overwriting the destination file when resume is disabled.
+
+- Fixed a possible bug when downloading files that are auto-cleared when the transfer is finished could cause a temporary error with the partial files.
+
+- Sped up the deletion of items from the transfer list.
+
+- Added right-click contextual menu capabilities for text entry fields on MacOS X.
+
+- Fixed deleting multiple contacts in the addressbook deleting only every other one.
+
+- Optimized deletion of items from the addressbook to avoid unnecessary repeated internet requests.
+
+- Fixed excessive flickering while deleting items from the addressbook.
+
+- Fixed an error where resuming errored transfers from the toolbar counted them as active transfers while still queued.
+
+- Fixed paused transfers not resuming to queued unless there are no other files being transferred.
+
+- Fixed auto-resuming errored transfers never starting if there was an error getting the file info.
+
+- Fixed not resuming the next file if there is an error getting a transfer's info.
+
+- Fixed a problem where errored files inside a folder transfer would not be allowed to resume.
+
+- Added per-transfer tooltips on the transfer list - just hover the mouse over a transfer to show its name, status, and error message if the status is "Error".
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.2.13 --
+
+- Fixed showing and accessing network shares in MacOS X
+
+- Fixed a possible delayed application crash when deleting a contact from the addressbook.
+
+- Fixed a possible delayed application crash when retrieving the addessbook fails and the dialog is closed.
+
+- Fixed specific user interface items not being read correctly by screen readers.
+
+- Fixed a problem where enabling "Auto-clear completed transfers" in the preferences could cause issues clearing folder transfers.
+
+- Fixed a bug where some memory would not be freed after adding a contact in the addressbook.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.2.11 & 1.2.12 --
+
+- Reworked the Address Book to use a standard list. This allows for sorting by email, name or description.
+
+- Fixed an issue with deleting the temporary partial files when a transfer is cancelled.
+
+- When sending a link, if a contact's eMail is already in the eMail entry field, it will now be selected when opening the address book.
+
+- Fixed an issue where the application's log would not be saved across sessions in some configurations.
+
+- Added a preferences option to resume a file transfer if an error occurred after an specific amount of minutes has passed. This is enabled by default to restart any transfer that causes an error after 5 minutes.
+
+- Added information about the time left for a transfer to resume automatically if it has caused an error. The transfer can be forced to resume at any point.
+
+- Fixed a problem where resuming a file that failed while getting the name information from the server would not work.
+
+- Extended the Drag&Drop feature to allow for direct file links and extended types of link that include file names to be dropped in the Wizard from other applications.
+
+- Simplified the error reporting to the user when communication with the Sendspace server fails.
+
+- Fixed a possible issue where closing the Wizard would store invalid values for the size and position of the application, causing it to shown incorrectly on next run.
+
+- Contacts are now sorted in the addressbook by name and email.
+
+- Fixed a possible application crash when processing remote information about a shared folder.
+
+- When showing the "Extended options" dialog upon adding a file to the transfer list, cancelling this dialog will cancel adding the file to the queue.
+
+- Fixed a problem where a file finishing upload after the current session expired could cause a crash if the user is editing a remote file name.
+
+- Fixed a problem where entering spaces in the email list when sending a link would cause the email sending to fail.
+
+- Important stability improvements when contacting the Sendspace server and during transfer. I some situations where the application used to crash and show the bug report dialog, it will now report an error and continue execution.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.2.10 --
+
+- Fixed a bug that could hang the application when deleting multiple remote folders.
+
+- Added the "copy" style to the Drag&Drop icons when an item can be dropped in one of the lists.
+
+- Fixed the application not showing in the foreground when opening on some configurations.
+
+- Fixed a possible crash when Drag&Drop is used on an empty browser.
+
+- Fixed a problem where a file being deleted while the rename field is activated would cause the next file to be renamed instead.
+
+- Fixed a crash when deleting the last file in the list while it's being renamed.
+
+- Fixed a problem with some MacOS X 10.4 (Tiger) systems.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.2.9 --
+
+- Enable moving  and deleting multiple folders a the same time in the remote browser.
+
+- Enabled 64bits versions of the Wizard on some systems.
+
+- In-place renaming of files on MacOS X systems will not happen until the mouse button is released and the rename timer is up. This fixes problems with some operations starting a rename when it's not the user's intention.
+
+- Fixed renaming of files to not interfere with Drag&Drop operations, which would cause crashes on some systems.
+
+- Fix refresh of rename items on MacOS X to fix a crash when Drag&Drop is used to queue an upload file.
+
+- Moved the roaming data on MacOS X systems to a user-specific folder to allow users to run the Wizard form a read-only mounted DMG, and multiple users on a single system.
+
+- Enabled the "Show hidden files" option on the Linux version of the Wizard. 
+
+- Allow Drag&Drop near the top and bottom parts of the local and remote browser to scroll the list dynamically, faster the closer you are to the border.
+  This allows the user to drop a file on a specific folder even if the list is not scrolled to that folder at the time the Wizard window is shown.
+
+- Modified the splitter for local and remote browser to resize them equally when resizing the main window.
+
+- Added a new "Last download time" column to the remote browser.
+
+- Updated the Wizard to use the full capabilities and stability fixes of recent versions of the libsendspaceapi framework.
+
+- Fixed accessibility access of the sound options on MacOS X 
+
+- Fixed the "Restart the Wizard" checkbox in the crash dialog to be read by screen readers.
+
+- Updated fixes to the third party frameworks to improve stability.
+
+- Files with the same sorting value when ordering by a column that is not the file name column will get ordered by file name.
+
+- Fixed sorting of list in browsers and transfers beign incorrect in some systems.
+
+- Added option to dynamically hide the local brower for users that want to only use Drag&Drop to add files to upload.
+
+- Added the option to choose wether to sort folders first or not in the browser list for MacOS X users.
+
+- Fixes to the size of the preferences dialog on MacOS X to prevent text from wrapping.
+
+- Enbled the option to Drag&Drop files on the transfer section of the Wizard from other applications on MacOS X.
+
+- Several fixes to VoiceOver support on MacOS X allow for reading of accessibility values that would previously read "unknown".
+
+- Fixes to display on MacOSX when "Extended Voiceover support" is disabled.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.2.7 & 1.2.8 ---
+
+- Fixed a problem where changing any property of a folder without changing the name would reset the name to the link ID.
+
+- Fixed a problem when adding shared folders via the URL field, which was preventing some users from browsing or downloading the folder.
+
+- Fixed screen reader access to checkboxes and choice boxes in preferences and other GUI sections.
+
+- Added support for sound events in MacOS X.
+
+- Fixed graphical artifacts in browser toolbar buttons in MacOS X.
+
+- Fixed graphical artifacts in the font/colour selection buttons on the GUI Tweaks preferences' option.
+
+- Improved speed of the transfer list interaction in MacOS X.
+
+- Fixed a rare problem where errored transfers still counted as active.
+
+- Fixes to the Drag&Drop of files when the link contains a filename.
+
+- Fixed a problem where completed folders wouldn't be auto-removed from the list even if the option is selected.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.2.5 & 1.2.6 ---
+
+- Updated the refresh conditions for the transfer list to be less CPU intensive, while showing a more consistent refresh rate.
+
+- Optimized the display of operations on multiple items by only refreshing the browsers after all the operations are completed.
+
+- Added an option to limit the max lines in the log window.
+
+- Added an option to save the application log across sessions.
+
+- Added an option to allow the application to steal focus from the operating system when adding files.
+
+- Moving multiple files/folders now refreshes the destination folder accordingly when using cut/paste.
+
+- Deleting multiple files/folders is now done in a single call to the servers.
+
+- Fixed sorting by type in the local and remote browser.
+
+- Fixed a bug where a request to update information about a remote folder was sent when closing the properties dialog even when no change was made.
+
+- Fixes to drag&drop of files from the local browser when a refresh of the folder happens while we're showing the upload options sometimes causing the wrong file to be added to the list.
+
+- Fixed a bug causing the number of downloads listed in the status bar to be incorrect after expanding/collapsing a folder.
+
+- Fixed an issue where logging with a different user but canceling when we're told that the queue will be cleared saved the new login information.
+
+- Fixed a possible crash when opening a URL in internet explorer from the Wizard.
+
+- Fixed a possible crash on editing a file's properties under certain rare circumstances.
+
+- Fixed a possible crash on close when adding a new file during shutdown sequence.
+
+- Fixed a possible crash on close when threads are being discarded.
+
+- Fixed a possible crash on close when the transfer list is being saved.
+
+- Fixed a possible crash on close when interacting with the transfer list on shutdown.
+
+- Upgrades to the build system to update the libsendspace version to 1.3, which includes fixes to improve transfer reliability.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.2.3 & 1.2.4 --
+
+- Fixed high CPU/RAM usage reported by some users when navigating their local folders. The implemented cache for locally defined icons and file types was not being used in some configurations.
+
+- Fixed a problem storing the window's size when closing the Wizard while still minimized.
+
+- Reduced tooltip delay on buttons to one second from two seconds.
+
+- Fixed erroneous display when showing the properties of a folder or file whose size is bigger than 2GB (4GB in some configurations).
+
+- Fixed focus not being set correctly in the URL enter field for accessibility users.
+
+- Improved stability if Window's GDI resources become depleted.
+
+- Fixed a rare crash on initialization caused by extra events being processed before the application is ready.
+
+- Fixed a common crash when closing the application while a transfer folder's contents were expanded.
+
+- Fixed a possible crash when showing a dialog to the user while the application is shutting down.
+
+- Fixed a rare crash caused by the login dialog being raised while the application is being closed.
+
+- Fixed a crash when the application is closed and the tray icon is activated on specific Windows' themes.
+
+- Fixes a rare crash on opening properties for a non-existant file.
+
+- Fixed a problem processing transfer folder's information received from the server that could lead to a crash or loss of queue information on restart.
+
+- Fixed a crash when the Wizard was closed and the query dialog for a password to use for a download file was being shown.
+
+- Fixed a rare issue where a transfer folder's name and size would be saved incorrectly across sessions.
+
+- Fixed a crash when saving transfer folders on close on specific configurations.
+
+- Fixed a rare crash when processing the transfer queue on shutdown.
+
+- In certain configurations, the Wizard's crash handler was creating recursive calls that could cause high CPU usage for a moderate period of time.
+
+- English language fixes on some texts.
+
+- Updated core libraries.
+
+- Fixed a crash caused by the libsendspace core library clearing resources too early.
+
+- Fixed a crash and transfer corruption caused by the retries in libsendspace core library not being reset correctly upon correct connection.
+
+- Fixed a crash on shutdown when the login dialog is being shown.
+
+- Copyright year bumped to 2010.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.2.2 --
+
+- Fixed crashes on MacOSX (and possibly other platforms) related to the Drag&Drop feature. If you were avoiding DnD because of crashes when adding files to the wizard, please try now and send feedback to us if it still happens.
+
+- When sending a file/folder link (or multiple selected files/folders), show a list of the last 10 messages used, sorted by most recent use. 
+  Messages are saved even when sending the email fails, so they can easily be used to retry the operation. Selecting "Cancel" won't save the current message.
+
+- Enabled Drag&Drop of folders to other folders in the remote browser.
+
+- Allow to show the properties dialog when selecting multiple files/folders. The dialog now shows total subfolders/files and total size.
+
+- Description and password for files, along with the "Shared" property for folders, can now be changed when opening the "Properties" dialog for multiple items.
+
+- Enabled Cut and Paste of folders.
+
+- For platforms that support it, added the file type and the associated icon for files in the browsers if it can be retrieved from the operating system.
+
+- Added some extra text to the dialog shown when removing local or remote files to make clear that the operation can not be reversed and the files will be removed permanently.
+
+- Allow to show/hide hidden folders (those that start with a ".") in MacOSX. Set to "hide" by default, this behaviour can be disabled in the preferences, "GUI Tweaks" section.
+
+- Allow folders containing the path separator "/" to be displayed in MacOSX.
+
+- Fixed an error deleting folders with the toolbar button.
+
+- Enabled downloading folders with the "Enqueue" button in the toolbar.
+
+- Fixed a possible log corruption problem happening with unicode file names.
+
+- The number of file/folder links being sent is now shown in the file/folder link send dialog.
+
+- Selecting an email in the addressbook dialog will now check the box when opening the dialog from the extended options for a file upload.
+
+- Optimized processing time when listing large amounts of items in the browsers.
+
+- Disabled some legacy code that could interfere with the operating system's clipboard.
+
+- Fixed a potential problem with spaces before or after the username and password.
+
+- Fixed a potential error when loading saved column sizes for the browsers. Some column sizes had to be reset to the defaults for this release to fix incorrect values.
+
+- Fixed sorting by some of the local/remote columns not working correctly on specific configurations.
+
+- Added an "Add new folder" button to each browser's toolbar.
+
+- The "New folder" dialog will now specify if the user is creating a local or a remote folder.
+
+- Fixed an error where adding several files with the "Upload to SendSpace" right-click option on Windows Explorer would only add the first one to the Wizard.
+
+- Fixed a possible crash after a login progress dialog is canceled and a second login gives an authentication failure error.
+
+- Fixed several crashes happening on application shutdown that were related to the Drag&Drop feature. 
+
+- Fixed a crash happening on certain MacOSX configurations when clicking slightly to the left of the file icon in the browsers.
+
+- Fixed a possible crash happening when a refresh of the remote folder is triggered while editing a file name in place.
+
+- Fixed a possible problem where showing a file's description field could show random characters.
+
+- Modified the text shown for sending file/folder links in the context menu shown when right-clicking on the remote browser with several items selected to properly reflect the type and quantity of items selected.
+
+- Fixed a very rare download corruption problem when a partial file gets modified by an external application or filesystem corruption and becomes bigger than the downloaded size. 
+
+- Fixed remote folder not being updated when pasting a folder or file that has been cut from another remote folder.
+
+- Fixed a potential problem in the SendSpace library that could cause file downloads to end up being corrupted or the application to show a debug dialog.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.2.1 --
+
+- Fixed a problem updating descriptions and passwords for remote files.
+
+- Fixed a rare Windows problem causing debug output when opening the preferences dialog.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.2.0 --
+
+- Removed the "Beta" tag.
+
+- Improved upload speed in Windows.
+
+- Fixed a bug in the SendSpace library that could cause corruption in downloaded files for some unstable internet connections.
+
+- Implemented the possibility to download or browse shared folders from other users. 
+  Just add the folder URL to the Wizard using the text entry and you will have the option to download the folder or browse its contents.
+  Additionally, a URL of the type "sendspace://folder:<id>", where <id> is the folder ID, is now recognized as a shared folder and can be used in websites.
+
+- Moved the configuration in Windows out of the user's main folder and into the applications' Roaming folder.
+
+- Fixed just-downloaded files showing as 0 bytes in the local browser.
+
+- Fixed some downloaded files not joining parts correctly when the filesystem has delayed write enabled.
+
+- Fixed some artifacts in the Properties dialog for files/folders where the text fields were partially obscured in MacOSX or when using a Classic theme in Windows.
+
+- Fixed some artifacts in the Properties dialog for files/folders where the text fields were scrolled to the right making only part of the filename visible.
+
+- Fixed several graphic glitches in the Preferences dialog.
+
+- Added an option to enable or disable the check for the association of sendspace:// links on startup.
+
+- Fixed a problem when removing the "Upload to SendSpace" right-click option for the Windows explorer from the preferences.
+
+- Fixed a rare problem with the startup check for sendspace:// links being associated with the Wizard.
+
+- Fixed a MacOSX bug when testing the paths to launch the Wizard.
+
+- Fixed browsing folders with windows native browser from the local browser's toolbar not working as expected.
+
+- Fixed an outstanding MacOSX crash related to Drag&Drop of outside files into the Wizard.
+
+- Added the possibility to download/upload a folder that is open in the remote or local browser. Right click without being in any item and select the relevant option in the popup menu.
+
+- Prevent dropping unknown objects to the local/remote browsers instead of showing an error message.
+
+- Speedup parsing recursive information on the dialog shown to add folders to the queue.
+
+- Fixed a possible application hang (spinning wheel) when login failed because of too long password/username on MacOSX.
+
+- Fixed shutdown not working correctly when selecting "Exit" from the tray icon.
+
+- Fixed a legacy problem with extended voiceover compatibility on MacOSX.
+
+- Fixed some key modifiers failing to be recognized, making some hotkeys fail.
+
+- Fixed a crash when the Wizard couldn't open the output file completing a download due to a filesystem failure. This is now reported and the file marked as "Error".
+
+- Fixed a possible crash on MacOSX when editing a file's label while it's being deleted.
+
+- Fixed a possible crash when the login dialog was deleted before being closed.
+
+- Fixed a possible crash in the File Properties dialog when a remote file is being deleted.
+
+- Fixed a possible crash when a framework function fails before the application finishes initializing.
+
+- Fixed a possible crash when the user manages to click the close button several times in a row.
+
+- Fixed a possible crash when the login window shows after the user has requested the application to quit.
+
+- Fixed a possible crash when manipulating remote files/folders' properties when a refreshing event is triggered.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.1.50 --
+
+- Fixed a race condition causing the wizard not to close from the menu bar or the automatic transfer ended settings under some circumstances
+
+- Fixed keyboard shortcuts in remote and local views not working in MacOSX.
+
+- Fixed keyboard shortcuts for Upload and Download not working on folders.
+
+- Fixed some keyboard shortcuts incorrectly working when more than one modifier was pressed for the key combination.
+
+- Fixed a problem where files will not upload from the local folder after the local path saved in the configuration becomes corrupted with doubled data. 
+
+- Added option in MacOSX to enable extended VoiceOver compatibility. It can be found in the Options section of the menu bar, or in the Preferences, under the GUI section. Warning: Enabling this option is ONLY aimed at accessibility users and has the side-effect of disabling Drag&Drop and file icons.
+
+- Fixed a possible crash when updating an item while a refresh happens in the remote folder.
+
+- Fixed a possible crash when the Operating System's resources prevent the splashscreen from being loaded.
+
+- Fixed a possible crash where the application is requested to close before it's fully initialized.
+
+- Fixed a possible crash when pressing the upload or download key while on shutdown sequence.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.1.49 --
+
+- Fixed a problem sending file links by email from the extended properties dialog when adding an upload (introduced in the previous version).
+
+- Changed the shutdown process to stop the active downloads before waiting for the finished downloads to join the downloaded parts.
+
+- Fixed a bug where the "Shared" status of a folder wouldn't be updated in the remote list unless a manual refresh is applied after changing it from a "copy link" or "send link" action.
+
+- Changed some of the dialog buttons to "Yes" and "No" instead of "OK" and "Cancel" to further reflect the content of the message.
+
+- Added an option to open the AddressBook from the main interface in "Options->Open AddressBook" and with the F11 hotkey.
+
+- Added some more informational messages when a Pro account has expired.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.1.48 --
+
+- Fixed a problem causing corruption to downloaded files if the wizard is closed right after a download finishes but before the partial files are joined and become the final downloaded file. The wizard will now show an informative dialog on close and will wait for those files to finish to prevent corruption.
+
+- The Wizard will now close instead of requesting the user's attention when only the login dialog is being shown and the user requests to close the application.
+
+- Added the possibility to copy several items' links from the remote browser at the same time. Selecting several remote files/folders and then "Copy link location" will copy all links to the clipboard, separated by newlines.
+
+- When a transfer errors, the Wizard will not longer interrupt the download to show the user a error dialog. The file's status will change to "Error" and the next queued file will resume. Check the "Activity log" to get more information about the errored transfer.
+
+- The extended options dialog that shows on adding a folder now allows to select to just send the folder link email for the top folder instead of every single file inside that folder. If this is chosen, the folder will be created as shared.
+
+- Fixed a possible error when the dialog opened on sending a file link is visible and the user interacts with the main window.
+
+- Added the possibility to send folder links by email in addition to the file links.
+
+- If an action is requested that would require a non-shared folder to be shared (send folder link by email, copy the folder link, etc), the wizard will ask you if you want to make that folder shared and explain what it entails.
+
+- Fixed a bug related to incorrect display of the remote bandwith, free space and file size for very specific values.
+
+- If a connection to the sendspace server is redirected to a different URL, the Wizard will now show you that URL and ask you if you want to open it in the default browser. This is useful for local policies and firewalls blocking internet access that will redirect you to a login or explanation page.
+
+- Improved the speed at which the Wizard joins the downloaded part files into the final file.
+
+- Improved the handling of the application bundle in MacOSX to enhance compatibility.
+
+- Addresses several generic control compatibilities in the MacOSX version to clear some graphical glitches in the preferences dialog.
+
+- Fixed two possible crashes related to the login dialog.
+
+- Fixed a crash happening on Windows when the user adds a file clicking a URL in the browser during the Wizard's shutdown sequence.
+
+- Fixed a rare crash happening when adding a file to the queue under some circumstances.
+
+- Fixed a crash happening very rarely when closing the wizard and a server request is still running.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.1.47 --
+
+- Fixed a bug happening in some specific configurations where some files reaching 99% would stall before finishing, or restart from the beginning. Re-enabling chunked upload if it has been disabled in the preferences because of upload problems in the past is strongly recommended.
+
+- Improved the responsiveness of cancelling transfers. Cancelling a transfer stalled because of a connection error should now happen immediatly, with an upper limit of 5 seconds.
+
+- Shutdown speed improved in situations where the internet connection is lost before the Wizard is closed.
+
+- Improved accessibility of the Transfers page in the preferences. The interface for browsing a local incoming version is now compatible with screen readers instead of just readding "button".
+
+- Improved compatibility of the sendspace:// link handler with Windows Vista and Windows 7.
+
+- Fixed several MacOSX-specific stability problems and improved VoiceOver compatibility.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.1.46 --
+
+- Changes to the hotkeys again: "Alt-1" and "Alt-2" were reported to interfere with some accessibility programs. The hotkeys are changed to "Alt-l" (local browser) and "Alt-r" (remote browser). The old "Alt-F1" and "Alt-F2" hotkeys are still operational.
+
+- Adding folders to the queue via URL text entry is only available for the user's folders, this will be improved in the near future.
+
+- Fixes for an "Unexpected parameter" error happening when the user associates sendspace:// links via windows and not via the Wizard.
+
+- Added an option to select using the new upload process from version 1.1.45 or the old version, in case the new code causes problems in your connection. The option is added to the "Transfers" tab in preferences.
+
+- Fixes to the internal library that prevent the wizard from crashing in a race condition related to the connection failing.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.1.45 --
+
+- The Wizard will now actively monitor the status of the files being uploaded more frequently. Files that previously would reach 99% complete just to restart from an earlier point in the transfer will now be correctly stopped and resumed shortly after the error happens.
+
+- Improved compatibility with some antivirus that would attempt to aggressively scan the files while being uploaded, resulting in unreal upload speeds and connection errors.
+
+- Fixed an issue where starting the application from the dock or a shortcut would in some cases fail to find the needed files in MacOS X.
+
+- Allow the download of folders from the sendspace link entry field.
+
+- Added two separate options to add/remove both sendspace:// links association and explorer right-click association in the preferences.
+
+- Choosing several files in the remote window and selecting "Send File Link" in the right-click menu will now send all the file links in a single email.
+
+- Removing and pausing files in the transfer list is now inmediate, and will not make the application unresponsive.
+
+- Improved accessibility for blind users to some preferences options that would previously be unnamed in screen readers.
+
+- Added the "Alt-u" hotkey to to upload files from local via native browser for users having accesibility issues with the local file list.
+
+- Changed focus options to "Alt-1" (local browser) and "Alt-2" (remote browser) to prevent linux window managers from interferring with the previous hotkeys. The former hotkeys "Alt-F1" and "Alt-F2" still perform the same function, but may be removed in the future.
+
+- Fixed several the text entry fields having the wrong size when using the windows classic theme in some systems.
+
+- Fixed a rare issue causing some files to report incorrect size or uploaded date/time in the remote browser.
+
+- Fixed a rare issue causing incorrect reports of available bandwith or used space in the account information dialog.
+
+- Fixed a rare crash when the Wizard's tray icon is clicked during shutdown.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.1.44 --
+
+- Fixed a rare incompatibility with Windows 2000.
+
+-- 1.1.43 --
+
+- Fixed a possible error when loading the addressbook list after the current login session expires. The Wizard will now try to refresh the session if getting the list fails.
+
+- Fixed a rare error on running the Wizard for the first time after a successful update in MacOSX.
+
+- Fixed a rare error where the application would hang while rearranging the queue.
+
+- Fixed an erroneus warning message on a clean application close when disconnecting from the server.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.1.42 --
+
+- Fixed a possible issue when the Wizard is set to close automatically after transfer finish and the application is set to minimize when clicking the close button.
+
+- Fixed a possible crash on MacOSX when closing the application from the Dock.
+
+- Fixed a possible issue in MacOSX when running the Wizard from the Dock and the Wizard will fail to start.
+
+- Fixed some visual artifacts in the preferences windows of the MacOSX version.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.1.41 --
+
+- Fixed the width of some progress dialogs to fit the text better.
+
+- Modified the shutdown progress to show a more accurate shutdown progress.
+
+- Fixed a problem that could create inestability in some MacOSX systems.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.1.40 --
+
+- Fixed the update process on MacOSX not starting the wizard after a successful update.
+
+- Fixed a possible issue on MacOSX when dropping file links from the Finder.
+
+- Fixed some artifacts in the MacOSX interface.
+
+- Fixed a possible crash when adding a local folder to upload while the wizard is shutting down.
+
+- Fixed a couple of preferences controls not being accessed by screen readers.
+
+- Updated the Windows installation: Now you can run the Wizard directly from the instalation program and uninstall it from "Add/Remove Programs" in your control panel.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.1.39 --
+
+- Fixed the user selection dialog that appears on XP when using the Wizard update that prevented some users from updating correctly.
+
+-- 1.1.38 --
+
+- Fixed a rare issue that under certain conditions could make one or more partial files of a completed download fail to merge into the final file.
+
+- Fixed the "Show main window" and "Hide main window" options in the system tray icon not working for some users.
+
+- Fixed an issue preventing some users with internationalized windows usernames from running the wizard, incorrectly reporting an error in the folder permisions.
+
+- Improved the update process in Windows Vista and MacOSX.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.1.37 --
+
+- Improved Windows Vista compatibility.
+
+- Fixed a rare issue that could cause stalled transfers to appear active.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.1.36 --
+
+- Added an address book: you can add, remove or modify recipients' emails for the future and send file links to them.  You can also import addresses in bulk through your account at the site.
+
+- Fixed a rare condition where some files would be correctly uploaded but the progres won't show on the interface.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.1.35 --
+
+- Added icons to identify files and folders in the transfer list. 
+
+- Fixed a problem where the selected sounds for transfer started or finished wouldn't be saved on restarting the application.
+
+- Some fixes to the shutdown code make it faster and more reliable.
+
+- Fixed a very rare application crash on a race condition while listing a remote folder.
+
+- Fixed the Wizard incorrectly thinking the application has crashed when the process is terminated by the operating system.
+
+- Added an option to restart the Wizard on the dialog shown in the rare event that the application crashes.
+
+- Fixed a problem with the method used to check for a single running instance in MacOSX.
+
+- Fixed a possible application crash when the login dialog is shown on application close.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.1.34 --
+
+- The Wizard now detects if there is a proxy or firewall preventing the connection to the sendspace servers and shows an informative message to the user.
+
+- Fixed the "Description" and "Password" fields not showing correctly when adding information to a new upload.
+
+- Fixed some possible issues with unicode files preventing folders from being listed correctly.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.1.31 & 1.1.32 & 1.1.33 --
+
+- Added the possibility to upload and download full directory structures. Please use this feature with caution. Be aware that clients downloading the files cannot download full folders due to browser limitations, files must be downloaded one by one and folder structure is not automatically maintained in such a case.
+
+- Added the possibility to change the colours of the items in the transfer queue.
+
+- Added the possibility to change the font used in the application.
+
+- Added the properties dialog for local folders and files.
+
+- When showing the properties for a folder, the number of subfolders, files, and the total size are now shown.
+
+- Finished transfers now show the full file path in the log.
+
+- Fixed "Minimize on close button" not working when the systray icon is disabled.
+
+- Fixed a rare problem on resuming large file uploads that could show them incorrectly as complete.
+
+- Several fixes to overall speed of the application and CPU/memory usage.
+
+- Fixed a potential problem where new downloads won't start automatically when adding http links to the Wizard.
+
+- Fixed a rare problem reading downloads queued with previous versions of the Wizard.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.1.30 --
+
+- Reconnection to the SendSpace server after a session expires is now silent.
+
+- Fixed a rare problem where queued transfers would fail to resume automatically.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.1.29 --
+
+- Added extra information to the folder properties dialog. Now shows total files, sub-folders and size.
+
+- Parallel transfers are now limited to a maximum of  10 downloads and 10 uploads. We recommend that you use the default values if you experience timeouts or disconnections.
+
+- Improved stability if the option to close the wizard when transfers are finished is selected, and dialogs are still open.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.1.26 & 1.1.27 & 1.1.28 --
+
+- Corrected an error that can result in download issues for some users.
+
+- New sounds for transfer completed/failed (courtesy of Chris Gilland at BlindPerspectives.net (chris@blindperspectives.net))
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.1.24 & 1.1.25 --
+
+- Added the ability to set sounds to some events, such as transfer completion and transfer error.
+
+- When links are added to the queue, the remote filename is shown instead of the file ID.
+
+- Changed the browser shortcut key for "Cut" to Ctrl-X.
+
+- All the text entry fields are now read correctly by screen readers.
+
+- Completed downloads are now saved across sessions until they are cleared from the list.
+
+- Settings for download/upload speed in Preferences are no longer modified when the speed adjustment dial is used.
+
+- Time on log window now uses the local time zone instead of CET.
+
+- Disk drives etc. now show the name/label in Windows.
+
+- Different icons for hard drives, network drives, CD-rom drives and removable drives are now used in the local browser.
+
+- Added automatic disabling of some incompatible options in certain Mac OS X systems that could cause the Wizard to not start.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.1.21 & 1.1.22 & 1.1.23 --
+
+- Added the ability to automatically add links to the Wizard with a new format, "sendspace://file_id", when used on web sites.
+
+- Added a new file right-click option in Windows Explorer to upload to SendSpace using the Wizard.
+
+- Fixed a potential error where long transfer queues could cause connection errors upon restart.
+
+- Added the shortcut Ctrl+A to select all files in the Wizard file browsers.
+
+- Fixed a synchronization error on Mac OS X that could lead to crashes when lots of files are being transferred on startup.
+
+- Fixed several misc. bugs and improved stability.
+
+-- 1.1.20 --
+
+- Added a new speed dial next to the Preferences icon in the toolbar - Use it to fine-tune your upload or download speed from the values specified in user preferences.
+
+- Fixed the use of a folder starting with the character "$" on Windows, both for download location and local browser.
+
+- Fixed a problem where some people wouldn't be able to open the 1.1.19 version on Mac OS X.
+
+- Extended the account information window (F12) to add information about Max points (if not Pro) and disk space used.
+
+- Fixed incorrect menu shortcuts.
+
+- Renamed the "Tools" menu to "Options" for clarity.
+
+- Added the "Send Feedback" option to the Help menu to improve accessibility.
+
+- Moved the "Focus" submenu to the new "Options" menu.
+
+- Further improved compatibility with accessibility programs.
+
+- Fixed several misc bugs and improved stability.
+
+-- 1.1.19 --
+
+- Increased the possible user password length to 20 characters.
+
+- Added a "Shared" column to the remote folders view. You can now edit the remote folder settings to allow sharing or not, and get the shared remote folder URL.
+
+- Added an Account Info dialog - you can access it in Tools, or by pressing F12
+
+- Further improved compatibility with accessibility programs.
+
+- Introduced new, more friendly, defaults for download locations.
+
+- Added information about the transfers and speed to the window title for fast lookup.
+
+- Removed the possibility of losing one of the local or remote browsers by moving the splitter bar.
+
+- When a download is saved between sessions, and the destination folder doesn't exist anymore, the Wizard now asks for a new download folder for that transfer.
+
+- Improved error reporting feedback to help us diagnose any problems with the application.
+
+- Minimize on close is now default on MacOSX, to follow the OS UI guidelines.
+
+- AIFF files are now displayed with the audio icon.
+
+- Fixed auto-update feature for Windows Vista users.
+
+- Fixed incorrect menu shortcuts on transfer list and file browser.
+
+- Fixed several possible incorrect error messages when downloading files.
+
+- Fixed display of date and time to use the native OS format.
+
+- Fixed display of long text entries on the Properties window for files.
+
+-- 1.1.18 --
+- Further refined screen reader support.  Do send feedback.
+
+- Better GUI defaults for first-time users.
+
+- Updated hotkeys.  Added focus keys.
+
+- If a file transfer fails the next file in queue automatically begins.
+
+- Fixed several misc bugs.
+
+
+-- 1.1.17 --
+- Highly improved screen reader support.  Do send feedback in.
+
+- Added a full set of Hotkeys to the menus.
+
+- Added cut/paste to the remote menu to enable moving files between folders.
+
+- Made the extended upload dialog open by default. This can still be turned
+off and on again in preferences.
+
+- Allow for resizing of columns in the local and remote windows.
+
+- Various bug fixes and performance improvements.
+
+
+-- 1.1.16 --
+- A new explorer-like local and remote file browser is now the default.  The old style is available by clicking the 'Switch browser view icon' which can be found on both the remote and local views.
+
+- The 'Add' icon on the toolbar is now always available.  Clicking it when no
+file is selected on either views will bring up a dialog which allows selecting
+a local file for upload.
+
+- Fixed transfer speed limit restrictions.
+
+- A tooltip showing file information is now available when hovering over a remote file with the mouse.
+
+- The Wizard can now be autoamtically closed upon completion of uploads or
+downloads.   On Windows it will also allow rebooting or shutting the computer
+down.   Find this setting in Preferences -> Transfers.
+
+- The Wizard will now ask users with more than 1000 files in a single
+folder to create sub-folders and better organize their files.
+
+- Many bug fixes.
+
+-- 1.1.13, 1.1.14 & 1.1.15 --
+- Minor bug fixes.
+
+-- 1.1.12 --
+- Added an optional message field for the "Send File Link" feature.
+
+- "Copy link" now copies the direct download link if available.
+
+- The "Add to queue" menu item is now called "Upload" or "Download" according
+to where the menu is invoked from.
+
+- The F4 key will now add a file to the upload or donwload queue depending on
+the file selected (local or remote view).
+
+- Toolbar icons now look better on the Mac.
+
+- Fixed several crashes reported in the previous version.
+
+-- 1.1.11 --
+- Fixed several crashes reported with version 1.1.10.
+
+- In preparation of our upcoming release of the Sendspace API, we have
+rewritten the core of the Wizard starting in version 1.1.10 using our new
+C++ API library -- all communications with sendspcae, uploads, downloads
+etc are conducted through this new library which is soon to be made public.
+
+Contact us should you wish to begin developing sendspace desktop or online
+applications using the new API!
+
+
+-- 1.1.10 --
+- Many bug fixes.  Upload/Download resume should work in rare cases where it
+failed before.
+
+- Fixed a crash for some users when stopping downloads.
+
+- Can now add multiple links for download.  The Wizard will extract the
+correct links from any block of text you paste.
+
+- Option to minimize the Wizard rather than exit when clicking the 'X' to
+close the main Window;  Find this in Preferences -> GUI Tweaks.
+
+- Maximum file size is checked and enforced before upload begins.
+
+- Added the ability to download password protected files.
+
+- Pro users will now also see the Direct download link when selecting a remote
+file's properties.
+
+- Changelog can now be viewed at any time from the menu.  Help -> Show
+Changelog.
+
+
+-- 1.1.9 --
+- Misc bugfixes.  Last stable release before new features are added.
+
+
+-- 1.1.8 --
+- Fixed a bug that caused crashes for some users upon update.
+
+- Bugfix: Next queued files should start as expected now.
+
+- Add files to upload by dragging and dropping them into the Wizard!
+
+- Send download link by email. This can now be done in two ways:
+    1. In a new extended options dialog which appears when a file is added to the upload queue.
+	 This is switched off by default and you can turn it on in preferences.
+    2. By selecting any remote file and right-clicking with your mouse -> Send to a friend.
+
+- Added the ability to set file description when adding the upload to the transfer list -- must be enabled in Preferences -> Transfers.
+
+- Windows users can now move files up and down in the transfers list in order to fully control priority.
+
+- Mac users: Right-click menus can be enabled by pressing the Ctrl (Control) keyboard key and your mouse button simultaneously.
+
+
+- Introduced a new toolbar on local and remote views, allowing easier navigation
+	 - Navigate directly to any directory previously viewed using the history function.
+	 - Navigate directly to My Documents and Desktop.
+	 - Navigate by browsing for a folder.
+
+- Now shows the remaining bandwidth and diskspace in your sendspace account.
+
+- Improvement: In Windows, uploads are now possible from any mapped drive letter on your computer, including network drives.
+
+- We now show the total number of downloads per file. You can view this by selecting the remote file icon, right-click and select properties.
+
+- Hovering with the mouse cursor over the taskbar Wizard icon will display current statistics on uploads and downloads.
+
+
+- Bugfix: Proxies that require authentication now work again.
+- Bugfix: Fixed stuck logging in dialog after a period of inactivity.
+- Plenty of misc bug fixes all around.
+
