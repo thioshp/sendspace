@@ -1,2 +1,49 @@
 # sendspace
 Send, Receive, Track & Share Your Big Files!
+
+# Welcome to the beta release of SendSpace Wizard for Linux.
+=============================================================================
+
+
+# Platforms ------------------------------------------------------------------
+Supported platforms: Debian, both 32 and 64 bit.  
+
+Although it should, it may not run on other distributions due to extensive
+library dependencies.
+
+# Running --------------------------------------------------------------------
+
+1.  Select the appropriate binaries from the 32bit or 64bit directories
+depending on your architecture.  You will most likely need to install the
+latest version of the wxWidgets library, we currently link against 2.8.9.
+
+2. Copy both binaries to your directory of choice and execute the 'sswizard'
+binary.
+
+# Dependencies ---------------------------------------------------------------
+
+The Wizard depends on at least the following libraries:
+
+libpthread, libgtk2, libgdk2, libfontconfig, libXext, libXrender, libXinerama,
+libXi, libXrandr, libXcursor, libXfixes, libpango1, libobject2, libgmodule2,
+libgthread2, librt1, libglib2, libSM, libjpeg, libz1, libcurl4,
+libstdc++, libpangocairo1, libcairo2, libfreetype, libexpat1, libXam,
+libXdmcp, libICE, libidn, libpangoft, libatk1, libgdk_pixbuff2, libpng,
+libxml2.
+
+A few more dependencies exist but they should exist in most desktop systems.
+
+# Problems -------------------------------------------------------------------
+
+Should you run the Wizard and it fails to execute, run the following command:
+
+ldd ssgui_app | grep -i found
+
+The output would show you the missing libraries you need to install before
+attempting to run it again.
+
+If you need help, send us the output of the above command as well as details
+about your distribution.
+
+- Enjoy ----------------------------------------------------------------------
+
